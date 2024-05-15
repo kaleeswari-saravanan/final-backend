@@ -13,6 +13,8 @@ app.use(express.json());
 app.use('/auth', require('./routes/auth'));
 app.use('/studentDetails',require('./routes/studetails'));
 
+mongoose.set('strictQuery', false);
+
 // MongoDB Connection
 if(mongoose.connect('mongodb+srv://kavithakk26:kavithaK26@cluster0.wossllz.mongodb.net/AcademicDatabase?retryWrites=true&w=majority&appName=Cluster0'))
 {
